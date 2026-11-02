@@ -161,6 +161,24 @@ nav li a.ic::after{display:none}
 .cr p{margin:0 auto 2px;font-size:15px}
 .cr strong{display:block;margin-bottom:36px;font:800 32px/1.05 'Big Shoulders Display',sans-serif;text-transform:uppercase}
 footer{padding:28px 0 72px;border-top:1px solid rgba(255,255,255,.1);color:var(--mu);font-size:15px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  /* Devtosh SuperBazaar card */
+.card.wd{display:grid;grid-template-columns:1fr 1.1fr;align-items:stretch}
+.card.wd .pos{height:auto;min-height:340px}
+.pos.s{background:linear-gradient(150deg,#2B1A12,#070B0D 72%)}
+.pos.s::before{left:auto;right:-15%;bottom:-45%;background:radial-gradient(closest-side,rgba(255,179,107,.45),transparent)}
+.sw{position:absolute;left:8%;right:8%;top:9%;display:flex;align-items:center;gap:8px}
+.sw span{padding:5px 10px;border:1px solid rgba(255,255,255,.18);border-radius:999px;font:500 11px 'DM Mono',monospace;color:var(--mu)}
+.sw span:first-child{color:var(--ink);background:var(--am);border-color:var(--am)}
+.sw u{margin-left:auto;width:42px;height:22px;border-radius:999px;border:1px solid rgba(237,234,227,.4);position:relative}
+.sw u::after{content:'';position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;background:var(--am);animation:knob 6s ease-in-out infinite}
+.tiles{position:absolute;inset:24% 8% 10%;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:12px}
+.tiles i{position:relative;border:1px solid rgba(255,255,255,.14);border-radius:4px;background:linear-gradient(165deg,rgba(255,179,107,.3),rgba(14,21,24,.9));animation:lift 5s ease-in-out infinite;animation-delay:calc(var(--i)*-.8s)}
+.tiles i:nth-child(even){background:linear-gradient(165deg,rgba(25,199,180,.3),rgba(14,21,24,.9))}
+.tiles i::before{content:'';position:absolute;left:12%;bottom:14%;width:46%;height:8px;border-radius:4px;background:var(--tx)}
+.tiles i::after{content:'';position:absolute;right:12%;bottom:14%;width:22%;height:8px;border-radius:4px;background:var(--am)}
+@keyframes lift{50%{transform:translateY(-8px);border-color:var(--am)}}
+@keyframes knob{0%,40%{transform:none;background:var(--am)}50%,90%{transform:translateX(20px);background:var(--te)}}
+@media(max-width:860px){.card.wd{grid-template-columns:1fr}.card.wd .pos{min-height:260px}}
 /* motion */
 @keyframes drift{from{transform:translate(-4%,3%) scale(1)}to{transform:translate(6%,-4%) scale(1.2)}}
 @keyframes shine{to{background-position:200% 0}}
@@ -236,7 +254,7 @@ footer{padding:28px 0 72px;border-top:1px solid rgba(255,255,255,.1);color:var(-
 </div>
 </div></section>
 <section id="projects"><div class="w">
-<h2 class="d r">Two live projects</h2>
+<h2 class="d r">Three live projects</h2>
 <div class="g2">
 <div class="r" style="--d:1"><article class="card sp">
 <div class="pos"><div class="bars"><i style="--i:1;height:50%"></i><i style="--i:2;height:75%"></i><i style="--i:3;height:60%"></i><i style="--i:4;height:95%"></i><i style="--i:5;height:70%"></i><i style="--i:6;height:85%"></i></div></div>
@@ -252,6 +270,14 @@ footer{padding:28px 0 72px;border-top:1px solid rgba(255,255,255,.1);color:var(-
 <div class="tg f"><span>Employer verification</span><span>Application tracking</span><span>Real-time chat</span><span>Interviews</span><span>Hiring workflow</span></div>
 <div class="tg"><span>HTML</span><span>CSS</span><span>Firebase</span><span>GitHub Pages</span></div>
 <a class="ul" href="https://kamayegabharat.github.io" target="_blank" rel="noopener">Live demo</a><a class="ul" href="https://github.com/KamayegaBharat/kamayegabharat.github.io" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#gh"/></svg>GitHub</a><a class="ul" href="https://github.com/KamayegaBharat/kamayegabharat.github.io/wiki" target="_blank" rel="noopener">Wiki</a></div>
+</article></div>
+  <div class="r" style="--d:3;grid-column:1/-1"><article class="card wd sp">
+<div class="pos s"><div class="sw"><span>Women</span><span>Men</span><span>Mobiles</span><u></u></div><div class="tiles"><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i></div></div>
+<div class="cb"><h3 class="d">Devtosh SuperBazaar</h3>
+<p>A responsive editorial discovery platform for Indian shoppers, with handpicked fashion, ethnic wear, budget smartphones, mobile accessories, footwear and lifestyle finds. It includes an SEO-first style-guide blog with product cards inside articles, and a custom admin writing studio with a Markdown toolbar, draft and live preview, and affiliate product linking.</p>
+<div class="tg f"><span>Editorial catalog</span><span>Prerendered blog</span><span>Admin writing studio</span><span>Schema.org SEO</span><span>Dark and light mode</span></div>
+<div class="tg"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SSG</span><span>GitHub Pages</span></div>
+<a class="ul" href="https://devtoshsuperbazaar.github.io" target="_blank" rel="noopener">Live demo</a><a class="ul" href="https://devtoshsuperbazaar.github.io/blog/" target="_blank" rel="noopener">Blog</a></div>
 </article></div>
 </div>
 </div></section>
